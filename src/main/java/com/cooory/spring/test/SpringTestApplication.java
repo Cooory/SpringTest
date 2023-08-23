@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @SpringBootApplication
-@MapperScan(basePackages="com.cooory.spring.test.*")
+@MapperScan(basePackages="com.cooory.spring.test.*") // Repository Interface를 어디서 찾을거야?
 public class SpringTestApplication {
 
 	public static void main(String[] args) {

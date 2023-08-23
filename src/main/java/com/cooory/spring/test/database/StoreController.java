@@ -16,6 +16,7 @@ public class StoreController {
 	@Autowired
 	private StoreService storeService;
 	
+	// 가게 정보 리스트를 json 문자열로 response에 담는다.
 	@RequestMapping("db/store/list")
 	@ResponseBody
 	public List<Store> storeList() {
