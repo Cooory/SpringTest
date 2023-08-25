@@ -18,7 +18,7 @@ public class RealEstateController {
 	@Autowired
 	private RealEstateService realEstateService;
 	
-	@RequestMapping("/1")
+	@RequestMapping("/select/1")
 	@ResponseBody
 	public RealEstate realEstate(@RequestParam("id") int id) {
 		RealEstate realEstate1 = realEstateService.getRealEstate(id);
@@ -26,11 +26,22 @@ public class RealEstateController {
 		return realEstate1;
 	}
 	
-	@RequestMapping("/2")
+	@RequestMapping("/select/2")
 	@ResponseBody
 	public List<RealEstate> realEstateByRentPrice(@RequestParam("rentPrice") int rentPrice) {
 		List<RealEstate> realEstateList = realEstateService.getRealEstateByRentPrice(rentPrice);
 		
 		return realEstateList;
+	}
+	
+	@RequestMapping("/select/3")
+	@ResponseBody
+	public List<RealEstate> realEstateBtAreaAndPrice(
+			@RequestParam("area") int area
+			, @RequestParam("price") int price) {
+		List<RealEstate> realEstateList = realEstateService.getRealEstateByAreaAndPrice(area, price);
+		
+		return realEstateList;
+		
 	}
 }

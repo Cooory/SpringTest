@@ -27,4 +27,12 @@ public class RealEstateService {
 		
 		return realEstateList;
 	}
+	
+	// 넓이와 가격 조건에 따른 매물 정보 돌려주는 기능
+	public List<RealEstate> getRealEstateByAreaAndPrice(int area, int price) {
+		
+		List<RealEstate> realEstateList = realEstateRepository.selectRealEstateByAreaAndPrice(area, price);
+		
+		return realEstateList;
+	}
 }

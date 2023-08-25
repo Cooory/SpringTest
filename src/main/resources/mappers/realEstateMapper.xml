@@ -36,9 +36,31 @@
  		FROM
  			`real_estate`
  		WHERE 
- 		 	`type` = '월세
+ 		 	`type` = '월세'
  			AND <![CDATA[`rentPrice` < #{rentPrice}
  			]]>
  			
+ 	</select>
+ 	
+ 	<select id="selectRealEstateByAreaAndPrice" parameterType="map"
+ 	resultType="com.cooory.spring.test.mybatis.domain.RealEstate">
+ 		 SELECT
+ 			`id`
+ 			, `realtorId`
+ 			, `address`
+ 			, `area`
+ 			, `type`
+ 			, `price`
+ 			, `rentPrice`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM
+ 			`real_estate`
+ 		WHERE 
+ 			`type` = '매매'
+ 			<![CDATA[
+ 			AND `area` >= #{area}
+ 			AND `price` <= #{price}
+ 			]]>
  	</select>
  </mapper>
