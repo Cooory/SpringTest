@@ -36,16 +36,22 @@ public class RealEstateService {
 		return realEstateList;
 	}
 	
-	
+	// INSERT 1
 	public int addRealEstateByObject(RealEstate realEstate) {
 		int count = realEstateRepository.insertRealEstateByObject(realEstate);
 		
 		return count; // 리턴 타입 int
 	}
 	
+	// INSERT 2
 	public int addRealEstateByField(int realtorId, String address, int area, String type, int price, int rentPrice) {
 		int count = realEstateRepository.insertRealEstateByField(realtorId, address, area, type, price, rentPrice);
 		
 		return count;
+	}
+	
+	// UPDATE
+	public int updateRealEstate(int id, String type, int price) {
+		
 	}
 }

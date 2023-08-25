@@ -106,4 +106,15 @@
 			, #{rentPrice}
 		)
  	</insert>
+ 	
+ 	<update id="updateRealEstate" 
+ 	parameterType="com.cooory.spring.test.mybatis.domain.RealEstate">
+ 		UPDATE
+ 			`real_estate`
+ 		SET
+ 			`type` = #{type}
+ 			, `price` = #{price}
+ 		WHERE 
+ 			`id` = #{id}
+ 	</update>
  </mapper>

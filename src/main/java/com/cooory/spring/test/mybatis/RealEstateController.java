@@ -69,4 +69,11 @@ public class RealEstateController {
 		
 		return "입력 성공 : " + count2;
 	}
+	
+	
+	@RequestMapping("update/1")
+	@ResponseBody
+	public String updateRealEstate() {
+		
+	}
 }
