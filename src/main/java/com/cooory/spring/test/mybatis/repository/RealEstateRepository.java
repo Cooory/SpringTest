@@ -33,8 +33,11 @@ public interface RealEstateRepository {
 			, @Param("rentPrice") int rentPrice);
 	
 	// UPDATE
-	public int updateRealEstate(
-			@Param("id") int id
+	public int updateRealEstate( // 쿼리 수행 메소드
+			@Param("id") int id      // myBatis를 통함
 			, @Param("type") String type
 			, @Param("price") int price);
+	
+	// DELETE
+	public int deleteRealEstate(@Param("id") int id);
 }
