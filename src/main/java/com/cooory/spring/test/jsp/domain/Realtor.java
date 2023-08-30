@@ -2,7 +2,7 @@ package com.cooory.spring.test.jsp.domain;
 
 import java.util.Date;
 
-public class RealEstate {
+public class Realtor {
 	
 	private int id;
 	private String office;

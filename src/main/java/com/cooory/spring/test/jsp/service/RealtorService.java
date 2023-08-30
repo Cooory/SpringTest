@@ -1,13 +1,20 @@
 package com.cooory.spring.test.jsp.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cooory.spring.test.jsp.domain.Realtor;
 import com.cooory.spring.test.jsp.repository.RealtorRepository;
 
 @Service
-public interface RealtorService {
+public class RealtorService {
+	
+	@Autowired
+	private RealtorRepository realtorRepository;
 
-	public int addRealtorByObject() {
-		RealtorRepository.inse
+	public int addRealtor(Realtor realtor) {
+		int count = realtorRepository.insertRealtor(realtor);
+		
+		return count;
 	}
 }
