@@ -1,13 +1,31 @@
 package com.cooory.spring.test.jstl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@RequestMapping("/jstl")
 @Controller
 public class JSTLController {
 
-	@GetMapping("jstl/ex01")
+	@GetMapping("/test01")
 	public String test01() {
-		return "jstl/test01";
+		return "/jstl/test01";
+	}
+	
+	@GetMapping("/test02")
+	public String test02() {
+		
+		List<String> musicRanking = new ArrayList<>();
+		musicRanking.add("강남스타일");
+		musicRanking.add("벚꽃엔딩");
+		musicRanking.add("좋은날");
+		musicRanking.add("거짓말");
+		musicRanking.add("보고싶다");
+		
+		
 	}
 }

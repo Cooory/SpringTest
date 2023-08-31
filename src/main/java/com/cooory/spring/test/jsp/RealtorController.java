@@ -11,13 +11,16 @@ import com.cooory.spring.test.jsp.domain.Realtor;
 import com.cooory.spring.test.jsp.repository.RealtorRepository;
 import com.cooory.spring.test.jsp.service.RealtorService;
 
+
+@RequestMapping("/jsp/realtor")
 @Controller
 public class RealtorController {
 	
 	// 전달 된 공인중개사 정보를 저장하고, 결과를 태그로 구성해서 response에 담는다.
-	@RequestMapping("/jsp/realtor")
+	
+	
 	@Autowired
-	private RealtorRepository realtorRepository;
+	private RealtorService realtorService;
 
 	@GetMapping("/create")
 	public String createRealtor (
@@ -33,7 +36,7 @@ public class RealtorController {
 		realtor.setAddress(address);
 		realtor.setGrade(grade);
 		
-		int count = realtorServie.get
+		int count = realtorService.addRealtor(realtor);
 		
 		model.addAttribute("realtor", realtor);
 		
