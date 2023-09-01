@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 1200px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+
+.main-content {
+	height: 700px;
+}
+
+.logo {
+	height: 700px;
+}
