@@ -1,4 +1,4 @@
-package com.cooory.spring.test.jstl;
+package com.cooory.spring.test.weather;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,6 @@ public class WeatherController {
 		
 		
 		
-		return "jstl/test05";
+		return "jstl/test05/weatherList";
 	}
 }
