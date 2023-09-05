@@ -7,9 +7,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Weather {
 
 	private int id;
+	@DateTimeFormat(pattern="yyyy년MM월dd일")
 	private Date date;
 	private String weather;
-	@DateTimeFormat(pattern="yyyy년 MM월 dd")
 	private double temperatures;
 	private double precipitation;
 	private String microDust;

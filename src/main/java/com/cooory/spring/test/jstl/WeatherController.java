@@ -51,7 +51,7 @@ public class WeatherController {
 		
 		weatherService.addWeatherByObject(weather);
 		
-		return "redirecct:/jstl/weather/list";
+		return "redirect:/jstl/weather/list";
 		
 	}
 	
