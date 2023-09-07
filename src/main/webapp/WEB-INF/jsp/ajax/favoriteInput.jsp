@@ -39,7 +39,17 @@
 		$(document).ready(function() {
 			
 			$("#confirmBtn").on("click", function() {
+				var url = $("#url").val().trim();
+				if (url == "") {
+					alert("검사 할 url을 입력해주세요.");
+				}
 				
+				$.ajax({
+					type: "post"
+					, url: "/ajax/duplicate-url"
+					, data:{"title"}
+					
+				});
 			});
 			
 			
