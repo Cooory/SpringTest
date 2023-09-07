@@ -18,4 +18,7 @@ public interface FavoriteRepository {
 	
 	
 	public int selectCountUrl(@Param("url") String url); // 개수 셈
+	
+	
+	public int deleteFavorite(@Param("id") int id);
 }
