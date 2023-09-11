@@ -6,19 +6,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/ajax/treeHouse")
 @Controller
-public class TreeHouseController {
-
-	@GetMapping("/mainPage")
-	public String TreeHouseMain() {
-		
-		return "/ajax/treeHouse/mainPage";
-	}
-	
+public class BookingController {
 	
 	@GetMapping("/list")
 	public String TreeHouseList() {
 		
+		
+		
 		return "/ajax/treeHouse/list";
 	}
 	
+	
+	@GetMapping("/input")
+	public String TreeHouseInput() {
+		
+		
+		
+		return "/ajax/treeHouse/input";
+	}
+	
+	@GetMapping("/main")
+	public String TreeHouseMain() {
+		
+		
+		
+		return "/ajax/treeHouse/main";
+	}
 }
