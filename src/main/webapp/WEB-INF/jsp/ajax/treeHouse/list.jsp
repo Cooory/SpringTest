@@ -45,7 +45,6 @@
            			</tr>
            		</thead>
            		<tbody>
-           			<c:forEach var="booking" items="${ }">
            			<tr>
            				<td>김인규</td>
            				<td>2021년</td>
