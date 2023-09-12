@@ -64,15 +64,6 @@
            				<td>대기중</td>
            				<td><button class="btn btn-danger">삭제</button></td>
            			</tr>
-           			<tr>
-           				<td>김인규</td>
-           				<td>2021년</td>
-           				<td>2</td>
-           				<td>4</td>
-           				<td>010254215251</td>
-           				<td>대기중</td>
-           				<td><button class="btn btn-danger">삭제</button></td>
-           			</tr>
            		</tbody>
            </table>
        </section>

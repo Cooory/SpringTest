@@ -70,6 +70,8 @@ public class Booking {
 		this.updatedAt = updatedAt;
 	}
 	
+}
+	
 	
 	
 	
